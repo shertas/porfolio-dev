@@ -1,0 +1,47 @@
+---
+import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+---
+
+<div class="max-w-xl flex items-center gap-6">
+  <img
+    class="rounded-full size-10 lg:size-20 lg:hover:scale-300 relative hover:z-50 transition"
+    src="https://github.com/shertas.png"
+    alt="Foto de perfil"
+  />
+  <a
+    href="https://linkedin.com/in/albertoariaslopez"
+    target="_blank"
+    rel="noopener"
+    class="flex items-center transition md:justify-center md:hover:scale-105"
+  >
+    <Badge>Disponible para trabajar</Badge>
+  </a>
+</div>
+<h1
+  class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-1 lg:pb-4 items-center text-center"
+>
+  Hola, soy Alberto
+</h1>
+<h2
+  class="text-lg lg:text-2xl opacity-80 text-pretty text-justify max-w-175 [&>strong]:text-yellow-300 [&>strong]:font-normal [&>p>strong]:text-pretty"
+>
+  <strong>Programador y desarrollador web junior </strong>que ha dado un giro
+  profesional tras 8 años como fisioterapeuta.
+</h2>
+
+<nav class="flex gap-2 md:gap-4 my-4 md:my-8 flex-wrap">
+  <SocialPill href="https://linkedin.com/in/albertoariaslopez">
+    <LinkedInIcon class="size-4 md:size-6" />LinkedIn
+  </SocialPill>
+
+  <SocialPill href="https://github.com/shertas">
+    <GitHubIcon class="size-4 md:size-6" />GitHub
+  </SocialPill>
+  <SocialPill href="mailto:ariaslopezalberto1993@gmail.com">
+    <MailIcon class="size-4 md:size-6" />Enviar Email
+  </SocialPill>
+</nav>

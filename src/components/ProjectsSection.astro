@@ -1,0 +1,66 @@
+---
+import ProjectItem from "./ProjectItem.astro";
+
+import GitHubIcon from "../components/icons/GitHub.astro";
+import CSSIcon from "../components/icons/CSS.astro";
+import JSIcon from "../components/icons/JS.astro";
+import TailwindIcon from "../components/icons/Tailwind.astro";
+import AstroIcon from "../components/icons/AstroIcon.astro";
+import PhpIcon from "../components/icons/Php.astro";
+import SqlIcon from "../components/icons/Sql.astro";
+import AivenIcon from "../components/icons/Aiven.astro";
+import SVGIcon from "../components/icons/SVG.astro";
+import RenderIcon from "../components/icons/Render.astro";
+import DockerIcon from "../components/icons/Docker.astro";
+import CleanArchitectureIcon from "./icons/CleanArchitecture.astro";
+
+const PROJECTS = [
+  {
+    title: "Web Porfolio Personal",
+    description:
+      "Desarrollo de una web personal para mostrar mis proyectos y habilidades como desarrollador web.",
+    gitHubLink: "https://github.com/shertas/shertas",
+    link: "http://localhost:4321/",
+    image: "/public/projects/porfolioWeb.jpg",
+    tags: [
+      { name: "Astro", Icon: AstroIcon },
+      { name: "Tailwind CSS", Icon: TailwindIcon },
+      { name: "JavaScript", Icon: JSIcon },
+      { name: "GitHub", Icon: GitHubIcon },
+    ],
+  },
+  {
+    title: "Trabajo de Fin de Grado - Juego de mesa SET",
+    description:
+      "Desarrollo del juego de mesa SET en la web, implemetación de la lógica del juego, diseño de la interfaz , ranking , contenerización, generación de imágenes dinámicas con SVG.\nRender tarda un poco en arrancar, ten paciencia al abrir el link. Además el servicio gratuito de Aiven desactiva la base de datos si en 3 días no se ha accedido a ella.",
+    gitHubLink: "https://github.com/shertas/Set",
+    link: "https://set-game-8god.onrender.com/",
+    image: "/public/projects/setGame.jpg",
+    tags: [
+      { name: "PHP", Icon: PhpIcon },
+      { name: "SQL", Icon: SqlIcon },
+      { name: "Aiven", Icon: AivenIcon },
+      { name: "JavaScript", Icon: JSIcon },
+      { name: "CSS", Icon: CSSIcon },
+      { name: "SVG", Icon: SVGIcon },
+      { name: "GitHub", Icon: GitHubIcon },
+      { name: "Docker", Icon: DockerIcon },
+      { name: "Render", Icon: RenderIcon },
+      { name: "Screaming Architecture", Icon: CleanArchitectureIcon },
+    ],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ title, description, gitHubLink, link, image, tags }) => (
+    <ProjectItem
+      title={title}
+      description={description}
+      gitHubLink={gitHubLink}
+      link={link}
+      image={image}
+      tags={tags}
+    />
+  ))
+}

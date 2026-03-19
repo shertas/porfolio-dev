@@ -1,0 +1,73 @@
+---
+import IconPill from "../components/IconPill.astro";
+
+import GitHubIcon from "../components/icons/GitHub.astro";
+import HTMLIcon from "../components/icons/HTML.astro";
+import CSSIcon from "../components/icons/CSS.astro";
+import JSIcon from "../components/icons/JS.astro";
+import TailwindIcon from "../components/icons/Tailwind.astro";
+import AstroIcon from "../components/icons/AstroIcon.astro";
+import JavaIcon from "../components/icons/Java.astro";
+import PhpIcon from "../components/icons/Php.astro";
+import PythonIcon from "../components/icons/Python.astro";
+import SqlIcon from "../components/icons/Sql.astro";
+import FastAPIIcon from "../components/icons/FastAPI.astro";
+import GitIcon from "../components/icons/Git.astro";
+import BitbucketIcon from "../components/icons/Bitbucket.astro";
+import CleanArchitectureIcon from "../components/icons/CleanArchitecture.astro";
+import SOLIDIcon from "../components/icons/SOLID.astro";
+
+const stackSections = [
+  {
+    title: "Frontend",
+    items: [
+      { name: "HTML", Icon: HTMLIcon },
+      { name: "CSS", Icon: CSSIcon },
+      { name: "JavaScript", Icon: JSIcon },
+      { name: "TailwindCSS", Icon: TailwindIcon },
+      { name: "Astro", Icon: AstroIcon },
+    ],
+  },
+  {
+    title: "Backend",
+    items: [
+      { name: "Java", Icon: JavaIcon },
+      { name: "PHP", Icon: PhpIcon },
+      { name: "Python", Icon: PythonIcon },
+      { name: "FastAPI", Icon: FastAPIIcon },
+      { name: "SQL", Icon: SqlIcon },
+    ],
+  },
+  {
+    title: "Tools",
+    items: [
+      { name: "Git", Icon: GitIcon },
+      { name: "GitHub", Icon: GitHubIcon },
+      { name: "Bitbucket", Icon: BitbucketIcon },
+    ],
+  },
+  {
+    title: "Arquitectura",
+    items: [
+      { name: "Arquitectura Limpia", Icon: CleanArchitectureIcon },
+      { name: "Principios SOLID", Icon: SOLIDIcon },
+    ],
+  },
+];
+---
+
+{
+  stackSections.map((section) => (
+    <h2 class=" text-lg md:text-xl lg:text-2xl opacity-80 text-wrap">
+      {section.title}:
+      <ul class="flex gap-x-4 mt-4 flex-wrap">
+        {section.items.map(({ name, Icon }) => (
+          <IconPill>
+            <Icon class="size-4" />
+            {name}
+          </IconPill>
+        ))}
+      </ul>
+    </h2>
+  ))
+}

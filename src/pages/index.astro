@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Hero from "../components/Hero.astro";
+import StackSection from "../components/StackSection.astro";
+import ExperienceSection from "../components/ExperienceSection.astro";
+import ProjectsSection from "../components/ProjectsSection.astro";
+import AboutMeSection from "../components/AboutMeSection.astro";
+---
+
+<Layout
+  title="Porfolio de Alberto - Desarrollador y Programador Web."
+  description="Web Porfolio con los proyectos realizados de Alberto y las tecnologías utilizadas"
+>
+  <main class="px-4">
+    <SectionContainer id="heroSection" class="mb-8 md:mb-16">
+      <Hero />
+    </SectionContainer>
+
+    <SectionContainer
+      id="stackSection"
+      name="Stack Tecnológico"
+      class="mb-4 md:mb-8"
+    >
+      <StackSection />
+    </SectionContainer>
+
+    <SectionContainer
+      id="experienceSection"
+      name="Experiencia"
+      class="mb-4 md:mb-8 flex flex-col"
+    >
+      <ExperienceSection />
+    </SectionContainer>
+
+    <SectionContainer
+      id="projectsSection"
+      name="Proyectos"
+      class="mb-4 md:mb-8 flex flex-col"
+    >
+      <ProjectsSection />
+    </SectionContainer>
+    <SectionContainer
+      id="aboutMeSection"
+      name="Sobre Mí"
+      class="mb-4 md:mb-8 flex flex-col"
+    >
+      <AboutMeSection />
+    </SectionContainer>
+  </main>
+</Layout>

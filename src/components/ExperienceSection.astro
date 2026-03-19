@@ -1,0 +1,23 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Septiembre 2025 - Noviembre 2025",
+    title: "Desarrollador Web Liberalia Assistance",
+    description:
+      "Consumo de APIs REST Y SOAP, comunicación con bases de datos SQL, rediseño de la interfaz de usuario utilizando JS HTML y CSS, implementación de nuevas funcionalidades, control de versiones con Bitbucket.",
+    link: "",
+  },
+];
+---
+
+<ol class="relative ml-2 lg:ml-4 border-s border-cyan-500">
+  {
+    EXPERIENCE.map((experience) => (
+      <li class="mb-4 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

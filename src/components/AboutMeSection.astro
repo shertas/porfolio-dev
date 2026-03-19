@@ -1,0 +1,34 @@
+---
+const personalImageAlt = "Alberto Arias";
+---
+
+<article
+  class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 items-center justify-center gap-8 text-white"
+>
+  <div
+    class="text-justify [&>p]:mb-4 [&>p>strong]:text-yellow-300 [&>p>strong]:font-normal [&>p>strong]:text-pretty order-2 md:order-1"
+  >
+    <p>
+      Me llamo Alberto Arias. Estoy dando un giro a mi carrera profesional con
+      el objetivo de asentarme como desarrollador web. Tras 8 años como
+      fisioterapeuta, necesitaba un <strong>
+        cambio que incluyera un reto mental.
+      </strong>
+    </p>
+
+    <p>
+      Mi experiencia en el mundo de la salud me ha dotado de <strong
+        >habilidades como la resolución de problemas, la comunicación efectiva y
+        el trabajo en equipo</strong
+      >, que son transferibles al desarrollo web.
+    </p>
+  </div>
+  <img
+    width="200"
+    height="200"
+    src="/me.jpg"
+    alt={personalImageAlt}
+    class="items-center mx-auto order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+    style="object-position: 50% 50%"
+  />
+</article>
