@@ -37,6 +37,13 @@ const linkClasses =
         menuHoverElements.forEach((element) => {
           element.addEventListener("click", () => {
             menu.classList.toggle("hidden");
+            menuBtn.classList.toggle("hidden");
+          });
+          document.addEventListener("click", (e) => {
+            if (!menuBtn.contains(e.target as Node)) {
+              menu.classList.add("hidden");
+              menuBtn.classList.remove("hidden");
+            }
           });
         });
       }
