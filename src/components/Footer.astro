@@ -1,16 +1,21 @@
+---
+const linkStyle =
+  "focus:ring-4 focus:ring-cyan-500 focus:outline-none rounded-full hover:text-yellow-300 me-4 md:me-6";
+---
+
 <footer
   class="rounded-lg shadow-xs border border-black m-4 bg-[#4724A6] w-full xl:w-280 mx-auto mb-10"
 >
   <div class="w-full mx-auto max-w-7xl p-4 flex items-center justify-between">
     <span class="text-sm text-body sm:text-center">2026 Alberto Arias. </span>
     <ul
-      class="flex flex-wrap items-center text-sm font-medium text-body sm:mt-0 [&>li>a]:hover:text-yellow-300"
+      class="flex flex-wrap items-center text-sm font-medium text-body sm:mt-0"
     >
       <li>
-        <a href="#aboutMeSection" class="me-4 md:me-6">Sobre mí</a>
+        <a href="#aboutMeSection" class={`${linkStyle}`}>Sobre mí</a>
       </li>
       <li>
-        <a href="mailto:ariaslopezalberto1993@gmail.com" class="me-4 md:me-6"
+        <a href="mailto:ariaslopezalberto1993@gmail.com" class={`${linkStyle}`}
           >Contacto</a
         >
       </li>

@@ -1,14 +1,21 @@
+---
+const linkStyle =
+  "focus:ring-4 focus:ring-cyan-500 focus:outline-none rounded-full hover:text-yellow-300 ";
+---
+
 <header
   class="flex justify-center items-center py-5 w-full xl:w-280 mx-auto sticky top-0 bg-black z-50 rounded-b-3xl"
 >
   <nav
-    class="flex flex-row gap-x-2 md:gap-x-10 opacity-80 text-sm md:text-base [&>a]:hover:text-yellow-300"
+    class="flex flex-row gap-x-2 md:gap-x-10 opacity-80 text-sm md:text-base"
   >
-    <a href="#top">Inicio</a>
-    <a href="#stackSection">Stack</a>
-    <a href="#experienceSection">Experiencia</a>
-    <a href="#projectsSection">Proyectos</a>
-    <a href="#aboutMeSection">Sobre Mí</a>
-    <a href="mailto:ariaslopezalberto1993@gmail.com">Contacto</a>
+    <a href="#top" class={`${linkStyle}`}>Inicio</a>
+    <a href="#stackSection" class={`${linkStyle}`}>Stack</a>
+    <a href="#experienceSection" class={`${linkStyle}`}>Experiencia</a>
+    <a href="#projectsSection" class={`${linkStyle}`}>Proyectos</a>
+    <a href="#aboutMeSection" class={`${linkStyle}`}>Sobre Mí</a>
+    <a href="mailto:ariaslopezalberto1993@gmail.com" class={`${linkStyle}`}
+      >Contacto</a
+    >
   </nav>
 </header>
