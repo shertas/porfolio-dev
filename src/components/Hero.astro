@@ -1,6 +1,6 @@
 ---
 import Badge from "../components/Badge.astro";
-import SocialPill from "../components/SocialPill.astro";
+import LinkPill from "../components/LinkPill.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import GitHubIcon from "../components/icons/GitHub.astro";
 import MailIcon from "../components/icons/Mail.astro";
@@ -34,14 +34,14 @@ import MailIcon from "../components/icons/Mail.astro";
 </h2>
 
 <nav class="flex gap-2 md:gap-4 my-4 md:my-8 flex-wrap">
-  <SocialPill href="https://linkedin.com/in/albertoariaslopez">
+  <LinkPill href="https://linkedin.com/in/albertoariaslopez">
     <LinkedInIcon class="size-4 md:size-6" />LinkedIn
-  </SocialPill>
+  </LinkPill>
 
-  <SocialPill href="https://github.com/shertas">
+  <LinkPill href="https://github.com/shertas">
     <GitHubIcon class="size-4 md:size-6" />GitHub
-  </SocialPill>
-  <SocialPill href="mailto:ariaslopezalberto1993@gmail.com">
+  </LinkPill>
+  <LinkPill href="mailto:ariaslopezalberto1993@gmail.com">
     <MailIcon class="size-4 md:size-6" />Enviar Email
-  </SocialPill>
+  </LinkPill>
 </nav>

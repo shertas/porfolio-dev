@@ -2,6 +2,7 @@
 import GitHubIcon from "./icons/GitHub.astro";
 import RightArrowIcon from "../assets/RightArrow.svg";
 import IconPill from "./IconPill.astro";
+import LinkPill from "./LinkPill.astro";
 
 interface Props {
   title: string;
@@ -47,29 +48,19 @@ const { title, description, gitHubLink, link, image, tags } = Astro.props;
   <div class="text-center">
     {
       link && (
-        <a
-          href={link}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center text-body bg-neutral-secondary-medium box-border border rounded-full hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-xs md:text-sm px-4 py-1 md:py-2.5 focus:outline-none border-white/60 bg-cyan-800 hover:scale-110 hover:bg-cyan-500 transition"
-        >
+        <LinkPill href={link}>
           Link al proyecto
           <RightArrowIcon class="size-2 md:size-4" />
-        </a>
+        </LinkPill>
       )
     }
     {
       gitHubLink && (
-        <a
-          href={gitHubLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center text-body bg-neutral-secondary-medium box-border border rounded-full hover:bg-neutral-tertiary-medium hover:text-heading focus:ring-4 focus:ring-neutral-tertiary shadow-xs font-medium leading-5 rounded-base text-xs md:text-sm px-4 py-1 md:py-2.5 focus:outline-none border-white/60 bg-cyan-800 hover:scale-110 hover:bg-cyan-500 transition"
-        >
+        <LinkPill href={gitHubLink}>
           <GitHubIcon class="size-2 md:size-2.5 mr-2" />
           GitHub
           <RightArrowIcon class="size-2 md:size-4" />
-        </a>
+        </LinkPill>
       )
     }
   </div>
